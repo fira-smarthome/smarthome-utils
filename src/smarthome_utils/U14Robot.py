@@ -38,8 +38,8 @@ class U14Robot:
         """
         Initialize the U14Robot with sensors, motors, and communication devices.
 
-        Sets up all the necessary components for the robot to function in the simulation,
-        including distance sensors, wheel motors, GPS, inertial unit, and communication.
+        Sets up all the necessary parts for the robot to function in the simulation,
+        including distance sensors, wheel motors, inertial unit, and communication.
 
         Args:
             team_name (str): The name of the team using this robot, used for identification.
@@ -92,10 +92,6 @@ class U14Robot:
 
         self.distanceSensor8 = self.robot.getDevice("D8")
         self.distanceSensor8.enable(self.timeStep)
-
-        # Set up GPS sensor
-        self.gpsSensor = self.robot.getDevice("gps")
-        self.gpsSensor.enable(self.timeStep)
 
         # Set up inertial unit (compass)
         self.iuSensor = self.robot.getDevice("inertial_unit")
